@@ -1,4 +1,4 @@
-# gulp-jsdom [![npm](https://img.shields.io/npm/v/gulp-jsdom.svg)](https://www.npmjs.com/package/gulp-jsdom) [![GitHub stars](https://img.shields.io/github/stars/sarfex/gulp-jsdom.svg?style=social&label=Star)](https://github.com/SARFEX/gulp-jsdom)
+# gulp-jsdom [![](https://img.shields.io/npm/v/gulp-jsdom.svg)](https://www.npmjs.com/package/gulp-jsdom) [![](https://img.shields.io/github/stars/sarfex/gulp-jsdom.svg?style=social&label=Github)](https://github.com/SARFEX/gulp-jsdom)
 
 
 > Manipulate DOM with jsdom
@@ -25,6 +25,6 @@ gulp.task("html", function () {
 	}))
 	.pipe(gulp.dest("./public/"));
 });
-  
-});
 ```
+
+> Work in progress
