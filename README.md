@@ -1,30 +1,56 @@
-# gulp-jsdom [![](https://img.shields.io/npm/v/gulp-jsdom.svg)](https://www.npmjs.com/package/gulp-jsdom) [![](https://img.shields.io/github/stars/sarfex/gulp-jsdom.svg?style=social&label=Github)](https://github.com/SARFEX/gulp-jsdom)
+# gulp-jsdom 
+[![](https://img.shields.io/npm/v/gulp-jsdom.svg)](https://www.npmjs.com/package/gulp-jsdom) [![](https://img.shields.io/github/stars/sarfex/gulp-jsdom.svg?style=social&label=Github)](https://github.com/SARFEX/gulp-jsdom)
 
 
-> Manipulate DOM with jsdom
+> Manipulate DOM with [jsdom](https://www.npmjs.com/package/jsdom)@latest 
+
 
 
 ## Installation
 
-Install package with NPM and add it to dev dependencies:
+`npm install gulp-jsdom --save`
 
-`npm install gulp-jsdom --save-dev`
-
-## Usage
+## Simple Example
 
 ```javascript
 const gulp = require("gulp");
 const dom = require("gulp-jsdom");
 
 gulp.task("html", function () {
-	return gulp.src("./index.html")
+	return gulp.src("./src/index.html")
 	
 	.pipe(dom(function(document){
-		var title = document.querySelector("title").textContent;
-		console.log(title);
+		document.getElementById('test').innerHTML = "Hello!";
 	}))
+	
 	.pipe(gulp.dest("./public/"));
 });
 ```
+## API
+
+### dom(mutator [, options, serialize])
+
+#### mutator
+
+Type: `Function`
+
+Manipulate DOM here! >:D
+
+
+#### options
+
+Type: `Object`
+Default: `{}`
+
+jsdom options [read more](https://www.npmjs.com/package/jsdom)
+
+
+#### serialize
+
+Type: `Boolean`
+Default: `true`
+
+[More information about serialize](https://www.npmjs.com/package/jsdom#serializing-the-document-with-serialize)
+
 
 > Work in progress
