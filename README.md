@@ -1,5 +1,7 @@
 # gulp-jsdom 
-[![](https://img.shields.io/npm/v/gulp-jsdom.svg)](https://www.npmjs.com/package/gulp-jsdom) [![](https://img.shields.io/github/stars/sarfex/gulp-jsdom.svg?style=social&label=Github)](https://github.com/SARFEX/gulp-jsdom)
+[![](https://img.shields.io/npm/v/gulp-jsdom.svg)](https://www.npmjs.com/package/gulp-jsdom) [![](https://david-dm.org/SARFEX/gulp-jsdom.svg)](https://david-dm.org/SARFEX/gulp-jsdom) [![](https://img.shields.io/github/stars/sarfex/gulp-jsdom.svg?style=social&label=Github)](https://github.com/SARFEX/gulp-jsdom) 
+
+
 
 
 > Manipulate DOM with [jsdom](https://www.npmjs.com/package/jsdom)@latest 
