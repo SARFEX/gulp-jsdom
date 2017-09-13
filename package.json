@@ -1,6 +1,6 @@
 {
   "name": "gulp-jsdom",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Simple DOM manipulations with jsdom",
   "keywords": [
     "gulpplugin",
@@ -16,9 +16,9 @@
   "license": "MIT",
   "repository": "SARFEX/gulp-jsdom",
   "dependencies": {
-    "gulp-util": "^3.0.7",
-    "jsdom": "^11.0.0",
-    "through2": "^2.0.1"
+    "gulp-util": "^3.0.8",
+    "jsdom": "^11.2.0",
+    "through2": "^2.0.3"
   },
   "devDependencies": {},
   "scripts": {
