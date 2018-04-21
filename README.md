@@ -10,7 +10,7 @@
 
 ## Installation
 
-`npm install gulp-jsdom --save`
+`npm install gulp-jsdom`
 
 ## Simple Example
 
@@ -22,7 +22,7 @@ gulp.task("html", function () {
 	return gulp.src("./src/index.html")
 	
 	.pipe(dom(function(document){
-		document.getElementById('test').innerHTML = "Hello!";
+		document.getElementById("test").innerHTML = "Hello!";
 	}))
 	
 	.pipe(gulp.dest("./public/"));
