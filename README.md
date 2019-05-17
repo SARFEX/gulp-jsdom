@@ -12,7 +12,22 @@
 
 `npm install gulp-jsdom`
 
-## Simple Example
+## Simple Example (gulp 4.0.2)
+
+```javascript
+const { src, dest } = require("gulp");
+const dom = require("gulp-jsdom");
+
+function html() {
+	return src("./src/index.html")
+	.pipe(dom(document => {
+		document.body.innerHTML = "Hello!";
+	}))
+	.pipe(dest("./public/"));
+}
+```
+
+## Simple Example (gulp 3.9.1)
 
 ```javascript
 const gulp = require("gulp");
@@ -22,12 +37,31 @@ gulp.task("html", function () {
 	return gulp.src("./src/index.html")
 	
 	.pipe(dom(function(document){
-		document.getElementById("test").innerHTML = "Hello!";
+		document.body.innerHTML = "Hello!";
 	}))
 	
 	.pipe(gulp.dest("./public/"));
 });
 ```
+
+## More Features
+
+```javascript
+// ...
+.pipe(dom(function(document, window){
+	
+	document;
+	window;
+	
+	this.filename; // current filename
+	this.file; // current file buffer
+	
+}), { 
+	/* jsdom options here */
+}, false) // serialize off
+
+```
+
 ## API
 
 ### dom(mutator [, options, serialize])
@@ -55,4 +89,4 @@ Default: `true`
 [More information about serialize](https://www.npmjs.com/package/jsdom#serializing-the-document-with-serialize)
 
 
-> Work in progress
+## Thank you
